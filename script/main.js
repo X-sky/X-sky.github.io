@@ -1,3 +1,7 @@
+onload = function () {
+  $("#load-mask").hide();
+  $("body").css("overflowY", "auto");
+};
 (function () {
   if (window.ActiveXObject) {
     var uA = navigator.userAgent;
