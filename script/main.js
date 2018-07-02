@@ -123,11 +123,9 @@ onload = function () {
     if (scrollTop > bannerHeight) {
       if (oNav.style.position !== "fixed") {
         oNav.style.position = "fixed";
-        oNav.style.height = "5vh";
       }
     } else if (oNav.style.position !== "relative") {
       oNav.style.position = "relative";
-      oNav.style.height = "7vh";
     }
     if (scrollTop >= (sectionList[0].offsetTop * .7) && scrollTop < sectionList[0].offsetTop + sectionList[0].offsetHeight * .7) {
       $("nav .link-right a").removeClass("on").eq(0).addClass("on");

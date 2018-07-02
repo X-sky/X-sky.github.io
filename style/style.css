@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "myFont";
+  src: url("../fonts/text_chi.ttf");
+}
 body, div, p, span, ul, li, h1, h2, h3,h4 {
   margin: 0;
   padding: 0;
@@ -9,7 +13,8 @@ a {
   font-size: inherit;
 }
 html {
-  font-size: 623%;
+  font-family: "myFont";
+  font-size: 670%;
 }
 body {
   background-color: #f1f1f1;
@@ -72,121 +77,120 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
 }
+@keyframes load-ani {
+  0% {
+      left: 82px;
+      top: 0;
+  }
+  80% {
+      left: 0;
+      top: 0;
+  }
+  85% {
+      left: 0;
+      top: -16px;
+      width: 16px;
+      height: 16px;
+  }
+  90% {
+      width: 33px;
+      height: 12px;
+  }
+  95% {
+      left: 82px;
+      top: -16px;
+      width: 16px;
+      height: 16px;
+  }
+  100% {
+      left: 82px;
+      top: 0;
+  }
+}
+@-webkit-keyframes load-ani {
+  0% {
+      left: 82px;
+      top: 0;
+  }
+  80% {
+      left: 0;
+      top: 0;
+  }
+  85% {
+      left: 0;
+      top: -16px;
+      width: 16px;
+      height: 16px;
+  }
+  90% {
+      width: 33px;
+      height: 12px;
+  }
+  95% {
+      left: 82px;
+      top: -16px;
+      width: 16px;
+      height: 16px;
+  }
+  100% {
+      left: 82px;
+      top: 0;
+  }
+}
 #load-mask {
   position: fixed;
   z-index: 22;
   width: 100%;
   height: 100%;
   background-color: #f1f1f1;
-  font-size: .5rem;
+  font-size: .4rem;
 }
 #load-mask p {
   margin: 0 auto;
   padding: 20px;
-  width: 300px;
-  height: 300px;
-  line-height: 300px;
-  background-color: #ccc;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  color: #666;
+}
+#load-mask>div {
+  position: relative;
+  margin: 0 auto;
+  width: 98px;
+  height: 30px;
   text-align: center;
 }
-@-webkit-keyframes jello {
-  from,
-  11.1%,
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  22.2% {
-    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
-    transform: skewX(-12.5deg) skewY(-12.5deg);
-  }
-
-  33.3% {
-    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
-    transform: skewX(6.25deg) skewY(6.25deg);
-  }
-
-  44.4% {
-    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
-    transform: skewX(-3.125deg) skewY(-3.125deg);
-  }
-
-  55.5% {
-    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
-    transform: skewX(1.5625deg) skewY(1.5625deg);
-  }
-
-  66.6% {
-    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
-    transform: skewX(-0.78125deg) skewY(-0.78125deg);
-  }
-
-  77.7% {
-    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
-    transform: skewX(0.390625deg) skewY(0.390625deg);
-  }
-
-  88.8% {
-    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-  }
+#load-mask>div>span {
+  position: absolute;
+  margin-right: 3px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ccc;
 }
-
-@keyframes jello {
-  from,
-  11.1%,
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-
-  22.2% {
-    -webkit-transform: skewX(-12.5deg) skewY(-12.5deg);
-    transform: skewX(-12.5deg) skewY(-12.5deg);
-  }
-
-  33.3% {
-    -webkit-transform: skewX(6.25deg) skewY(6.25deg);
-    transform: skewX(6.25deg) skewY(6.25deg);
-  }
-
-  44.4% {
-    -webkit-transform: skewX(-3.125deg) skewY(-3.125deg);
-    transform: skewX(-3.125deg) skewY(-3.125deg);
-  }
-
-  55.5% {
-    -webkit-transform: skewX(1.5625deg) skewY(1.5625deg);
-    transform: skewX(1.5625deg) skewY(1.5625deg);
-  }
-
-  66.6% {
-    -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
-    transform: skewX(-0.78125deg) skewY(-0.78125deg);
-  }
-
-  77.7% {
-    -webkit-transform: skewX(0.390625deg) skewY(0.390625deg);
-    transform: skewX(0.390625deg) skewY(0.390625deg);
-  }
-
-  88.8% {
-    -webkit-transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
-  }
-}
-
-.jello {
-  -webkit-animation-name: jello;
-  animation-name: jello;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
+.load-ani {
+  animation-name: load-ani;
+  -webkit-animation-anme: load-ani;
   animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite; 
+  -webkit-animation-iteration-count: infinite;
+  animation-duration: 2.3s;
+  -webkit-animation-duration: 2.3s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+}
+span.load-ani:nth-child(1) {
+  animation-delay: -.46s;
+}
+span.load-ani:nth-child(2) {
+  animation-delay: -.92s;
+}
+span.load-ani:nth-child(3) {
+  animation-delay: -1.38s;
+}
+span.load-ani:nth-child(4) {
+  animation-delay: -1.84s;
 }
 body {
   overflow-Y: hidden;
@@ -364,7 +368,7 @@ body {
 }
 @media (max-width: 1100px) {
   html {
-    font-size: 500%;
+    font-size: 550%;
   }
   #banner .banner-center {
     width: 700px;
@@ -373,7 +377,7 @@ body {
 }
 @media (max-width: 900px) {
   html {
-    font-size: 450%;
+    font-size: 500%;
   }
   #banner {
     padding: 20px 40px;
@@ -386,7 +390,7 @@ body {
 }
 @media (max-width: 768px) {
   html {
-    font-size: 400%;
+    font-size: 450%;
   }
   #banner .banner-center {
     width: 500px;
@@ -402,6 +406,24 @@ body {
     height: 40%;
   }
 }
+@media (max-width: 400px) {
+  #banner {
+    height: 550px;
+  }
+  #banner .banner-center {
+    width: 285px;
+    height: 35%;
+  }
+  #banner .banner-center .title-box+div {
+    line-height: 0;
+    transform: translateY(72px);
+    -webkit-transform: translateY(72px);
+  }
+  #banner .banner-center .title-box+div a {
+    color: #191919;
+    border-color: #191919;
+  }
+}
 /* 内容部分 */
 /* 头部 导航*/
 nav {
@@ -409,8 +431,7 @@ nav {
   top: 0;
   z-index: 20;
   width: 100%;
-  padding: 20px;
-  height: 7vh;
+  height: 40px;
   box-sizing: border-box;
   align-items:center;
   justify-content: space-between;
@@ -431,16 +452,18 @@ nav .link-right {
   justify-content: flex-end;
   width: 50%;
   max-width: 600px;
-  height: 48px;
+  height: 100%;
 }
 nav .link-right a.btn-default {
   position: relative;
-  padding: 10px 15px;
-  height: 85%;
+  padding: 0;
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
   border: 0;
   box-sizing: border-box;
-  line-height: 1;
   border-radius: 0;
+  text-align: center;
 }
 nav .link-right a.btn-default:first-child {
   border-radius: 5px 0 0 5px;
@@ -453,8 +476,25 @@ nav .link-right a.on {
   color: black;
 }
 @media (max-width: 768px) {
+  nav {
+    padding: 0 0 0 10px;
+  }
   nav .link-left {
     margin-left: 0;
+  }
+  nav .link-right {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  nav .link-right {
+    width: 72%;
+  }
+}
+@media (max-width: 400px) {
+  nav .link-right {
+    width: 82%;
   }
 }
 /* 中部 */
@@ -462,7 +502,7 @@ section {
   box-sizing: border-box;
   width: 100%;
   padding: 5%;
-  height: 100vh;
+  height: 900px;
   font-size: .2rem;
 }
 /* 个人简述 */
@@ -487,10 +527,11 @@ section.myself .bg {
   background-color: rgba(0, 0, 0, .9);
 }
 section.myself>h3 {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  top: 6%;
-  left: 10%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  padding-left:10%;
   display: none;
   width: 100%;
   font-size: .5rem;
@@ -500,46 +541,29 @@ section.myself .post {
   z-index: 2;
   width: 400px;
   height: 450px;
-  line-height: 450px;
-  background: url("../image/bg2-lg.jpg") center/cover fixed no-repeat;
+  background: url("../image/head-post.jpg") center/contain no-repeat;
   color: white;
   overflow: hidden;   
+  border-radius: 50%;
 }
-section.myself .post h3 {
-  padding: 20px 10px;
-  vertical-align: middle;
-  width: 99%;
-  line-height: 1.1;
-  font-size: .5rem;
-  display: inline-block;
-  text-align: center;
-  background-color: rgba(0, 0, 0, .5);
-}
-section.myself .post h3+div {
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  visibility: hidden;
-  vertical-align: middle;
-}
-section.myself .post::before, section.myself .post::after {
+/* section.myself .post::before, section.myself .post::after {
   content: '';
   display: inline-block;
   position: absolute;
-  top: -44%;
+  top: 5.5%;
   left: 0;
-  border-top: 200px solid rgba(0, 0, 0, .9);
+  border-top: 0px solid rgba(0, 0, 0, .9);
   border-right: 200px solid rgba(0, 0, 0, .9);
-  border-bottom: 105px solid transparent;
+  border-bottom: 115px solid transparent;
   border-left: 200px solid rgba(0, 0, 0, .9);
 }
 section.myself .post::after{
-  top: 70%;
-  border-top: 105px solid transparent;
+  top: 68.6%;
+  border-top: 115px solid transparent;
   border-right: 200px solid rgba(0, 0, 0, .9);
-  border-bottom: 200px solid rgba(0, 0, 0, .9);
+  border-bottom: 1px solid rgba(0, 0, 0, .9);
   border-left: 200px solid rgba(0, 0, 0, .9);
-}
+} */
 section.myself .post+div {
   position: relative;
   z-index: 2;
@@ -572,11 +596,35 @@ section.myself .post+div ul>li {
   margin: 10px 0;
 }
 @media (max-width: 768px) {
+  section.myself {
+    flex-direction: column;
+  }
   section.myself .post+div {
+    padding-left: 10%;
     width: 90%;
+    height: 80%;
   }
   section.myself .post+div ul {
+    justify-content: flex-start;
     height: 120%;
+  }
+  section.myself .post+div ul>li {
+    margin: 5px 0;
+  }
+}
+@media (max-width: 576px) {
+  section.myself>h3 {
+    padding-left: 0;
+    font-size: .4rem;
+  }
+  section.myself .post+div {
+    padding-left: 0;
+  }
+  section.myself .post+div ul>div {
+    margin-top: 7px;
+  }
+  section.myself .post+div ul>li {
+    margin: 5px 0;
   }
 }
 /* 技能 */
@@ -690,7 +738,7 @@ section.skill .center .monitor-bg {
   display: none;
 }
 .skill .center .sentence {
-  margin-top: 25%;
+  margin-top: 5%;
   font-size: .15rem;
   color: #8f8f8f;
 }
@@ -743,12 +791,13 @@ section.skill .right .progress .in {
   }
   section.skill .skill-per {
     margin-top: 20px;
-    width: 43%;
+    width: 49%;
   }
   section.skill .skill-per .progress{
     margin-bottom: 35px;
   }
   section.skill .skill-per .progress .in {
+    padding: 5px 10px;
     line-height: 2;
   }
   section.skill .center {
@@ -761,10 +810,17 @@ section.skill .right .progress .in {
     padding: 5px;
   }
 }
+@media (max-width: 576px) {
+  section.skill .center {
+    margin-top: -60px;
+    width: 79%;
+  }
+}
 /* 案例 */
 section.exps {
   position: relative;
-  align-items: center;
+  padding-top: 140px;
+  align-items: flex-start;
   justify-content: center;
   background-color: rgba(230, 230, 230)
 }
@@ -773,7 +829,7 @@ section.exps>h3 {
   top: 0;
   padding-top: 10%;
   left: 10%;
-  font-size: .35rem;
+  font-size: .4rem;
   display: none;
 }
 section.exps>h3::before {
@@ -789,18 +845,17 @@ section.exps>h3::before {
   border-left: 50px solid black;
 }
 section.exps .spec {
-  align-self: flex-start;
   box-sizing: border-box;
-  padding: 8% 5% 4% 8%;
+  padding: 5% 5% 0 8%;
   width: 38%;
 }
 section.exps .spec>h3 {
   margin-bottom: 20px;
-  font-size: .6rem;
+  font-size: .57rem;
 }
 section.exps .spec>p {
-  margin-bottom: 40px;
-  font-size: .3rem;
+  margin-bottom: 20px;
+  font-size: .28rem;
 }
 section.exps .icons {
   position: relative;
@@ -908,6 +963,11 @@ section.exps .modal .modal-pic img {
   display: block;
   width: 100%;
 }
+@media (max-width: 1376px) {
+  section.exps .spec>h3 {
+    font-size: .5rem;
+  }
+}
 @media (max-width: 1200px){
   section.exps .icons .hexagon {
     width: 200px;
@@ -917,22 +977,26 @@ section.exps .modal .modal-pic img {
     top: 100px;
   }
 }
-@media (max-width: 13760px) {
-  section.exps .spec {
-    padding-right: 5% !important;
-  }
-  section.exps .spec>h3 {
-    font-size: .5rem;
-  }
-}
 @media (max-width: 976px) {
+  section.exps .spec {
+    padding-top: 10%;
+  }
   section.exps>h3 {
     display: block;
   }
+  section.exps .icons {
+    top: 0;
+  }
 }
 @media (max-width: 768px) {
+  section.exps .icons {
+    width: 100%;
+  }
   section.exps .icons>div {
     flex-wrap: wrap;
+  }
+  section.exps .icons {
+    top: 80px;
   }
   section.exps .icons .hexagon {
     width: 145px;
@@ -1037,10 +1101,12 @@ section.work .part .right {
 .work .part .w-arrow li::before {
   content: '\00BB';
   display: inline-block;
+  font-weight: 600;
 }
 .work .part .b-arrow li::after {
   content: '\00AB';
   display: inline-block;
+  font-weight: 600;
 }
 .work .part .w-arrow::after {
   content: '';
@@ -1064,8 +1130,36 @@ section.work .part .right {
   border-bottom: 20px solid transparent;
   border-left: 20px solid transparent;
 }
+@media (max-width: 768px) {
+  .work .part .w-arrow::after {
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #f1f1f1;
+  }
+  .work .part .b-arrow::before {
+    border-top: 10px solid transparent;
+    border-right: 10px solid #242424;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+}
+@media (max-width: 576px) {
+  section.work .part {
+    padding: 0;
+  }
+  .work .part li {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .work .part li {
+    margin-bottom: 0;
+  }
+}
 /* 底部 */
 footer.banner {
+  max-height: 550px;
   background-image: url("../image/bg-3.png");
   background-position: center;
   background-size: cover;
@@ -1083,7 +1177,7 @@ footer.banner .bg {
 #thx {
   position: relative;
   z-index: 2;
-  margin: 15% auto 5%;
+  margin: 5% auto 0;
   max-width: 700px;
   max-height: 250px;
 }
@@ -1095,9 +1189,22 @@ footer.banner .bg {
   display: block;
   width: 100%;
 }
+@media (max-width: 996px) {
+  footer.banner {
+    height: 500px;
+  }
+  #thx {
+    margin-top: 0;
+  }
+}
 @media (max-width: 576px) {
   footer.banner {
-    height: 50vh;
+    height: 300px;
+  }
+}
+@media (max-width: 400px) {
+  #thx {
+    margin-top: 15%;
   }
 }
 /* global media query */
@@ -1113,12 +1220,30 @@ div.hidden {
     opacity: 1 !important;
   }
 }
+@media (max-width: 1200px) {
+  section {
+    height: 800px !important;
+  }
+}
+@media (max-width: 996px) {
+  section {
+    height: 700px !important;
+  }
+}
 @media (max-width: 768px) {
   .s-hidden {
     display: none !important;
   }
   .s-show {
     display: inline-block !important;
+  }
+  section {
+    height: 600px !important;
+  }
+}
+@media (max-width: 576px) {
+  section {
+    height: 550px !important;
   }
 }
 @media (max-width: 400px) {
